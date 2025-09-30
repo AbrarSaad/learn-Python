@@ -1,0 +1,3 @@
+#strinng 
+data = "Abrar"
+print("my name is {} my age is {}".format(data,"20"))
