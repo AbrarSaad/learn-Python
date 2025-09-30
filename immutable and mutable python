@@ -1,0 +1,15 @@
+#immutable create new value with new data, even the same value like mage 2x in the memory
+>>> x=4
+>>> id(x)
+3242532578352136
+>>> x=5
+>>> id(x)
+3242532578352168
+>>>
+#mutable here can modify the data of the list or array, or the value 
+>>> t={'Name':"Abrar"}
+>>> id(t)
+353433346678
+>>> t={'Name':"Programmer"}
+>>> id(t)
+353433346678
