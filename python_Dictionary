@@ -1,0 +1,14 @@
+# There are many ways to write the code of a dictionary in Python. A dictionary has a key and a value 
+>>> mylist = {'Name':"Abrar",'Age': 22,'salary': 234.5}
+>>> print(mylist)
+{'Name': 'Abrar', 'Age': 22, 'salary': 234.5}
+>>> print(mylist[Name])
+>>> print(mylist['Name'])
+Abrar
+>>>
+#or
+>>> Dictionary =dict(Name="Abrar",Age=22,Salary=234.5)
+>>> print(Dictionary)
+{'Name': 'Abrar', 'Age': 22, 'Salary': 234.5}
+>>> print(Dictionary['Name'])
+Abrar
