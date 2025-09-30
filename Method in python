@@ -1,0 +1,7 @@
+x=5
+... y=6
+... z=0
+... def AbrarMethod():
+...     z=x*y
+...     print(z)
+... AbrarMethod()
