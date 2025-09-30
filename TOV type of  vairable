@@ -1,0 +1,11 @@
+data="programmer"
+print(data,type(data))
+#The output programmer , Class>> str
+
+data=12345
+print(data,type(data))
+#The output 12345 , Class>> int
+
+data=3.6
+print(data,type(data))
+#The output 3.6 , Class>> float
