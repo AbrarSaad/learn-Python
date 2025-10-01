@@ -1,0 +1,16 @@
+>>> def ifcond():
+...     x= input(" Enter the first number:  ")
+...     y= input(" Enter the 2nd number:   ")
+...     if (int(x) > int(y)):
+...         print("The {} bigger more than {} ".format(x,y))
+...     else:
+...         print("The {} smaller more than {} ".format(x,y))
+...
+>>> ifcond()
+ Enter the first number:  2323
+ Enter the 2nd number:   1212
+The 2323 is bigger than 1212
+>>> ifcond()
+ Enter the first number:  534
+ Enter the 2nd number:   124332
+The 534 are smaller than 124332
