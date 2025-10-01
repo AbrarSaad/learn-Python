@@ -1,0 +1,16 @@
+>>> def ifcond():
+...     x= input(" Enter the first number:  ")
+...     y= input(" Enter the 2nd number:   ")
+...     if int(x)==int(y):
+...         print("yes")
+...     else:
+...         print("Not equal")
+
+>>> ifcond()
+ Enter the first number:  3
+ Enter the 2nd number:   3
+yes
+>>> ifcond()
+ Enter the first number:  4
+ Enter the 2nd number:   2
+Not equal
