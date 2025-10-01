@@ -1,0 +1,19 @@
+>>> def f(n):
+...     print('{:08b}'.format(n)) #to print the number in binary way 
+...
+>>> f(0b111)
+00000111
+>>>
+#to print the binary of a number
+>>> 0b111
+7
+#Hexa
+>>> f(0xaa) #to print the number in binary form Hexa means call the function to change the hexa number to a binary number
+10101010
+>>> 0xaa
+170
+#shifting to left or right means adding 0 to the right or left side 
+>>> 0b111 >> 2
+1
+>>> 0b111 << 2
+28
