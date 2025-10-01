@@ -1,0 +1,33 @@
+ DOB= 1990
+>>> YearNow=2025
+>>> MyAge = YearNow - DOB
+>>> print("Your Age is {}".format(MyAge))
+#output is "Your Age is 35"
+
+ import datetime # to get the date of today, we do not need to write the year, month, or day 
+>>> DOB= 2020
+>>> YearNow=datetime.datetime.now().year
+>>> MyAge = YearNow - DOB
+>>> print("Your Age is {}".format(MyAge))
+#output is "Your Age is 5"
+
+>>> import datetime
+>>> def CalculatMyAge():
+...     DOB=input("Enter your DOB" )
+...     YearNow = datetime.datetime.now().year
+...     MyAge = YearNow - int(DOB)
+...     print( "Your Age Is {}".format(MyAge))
+...
+>>> CalculatMyAge()
+Enter your DOB1990
+Your Age Is 35
+>>> CalculatMyAge()
+Enter your DOB2020
+Your Age Is 5
+>>> CalculatMyAge()
+Enter your DOB1989
+Your Age Is 36
+>>> CalculatMyAge()
+Enter your DOB1960
+Your Age Is 65
+>>>
