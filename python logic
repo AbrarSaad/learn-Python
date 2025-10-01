@@ -1,0 +1,28 @@
+>>> x=6
+>>> y=7
+>>> x<y
+True
+>>> x>y
+False
+>>> x==y
+False
+>>> x!=y
+True
+>>> z=x+y
+>>> z
+13
+>>> b=1
+>>> not(b)
+False
+>>> b
+1
+>>> c=0
+>>> not(c)
+True
+>>> a=1
+>>> b=1
+>>> c=2
+>>> a==b and a==c
+False
+>>> a==b or a==c
+True
