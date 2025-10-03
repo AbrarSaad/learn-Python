@@ -1,0 +1,16 @@
+>>> i=0
+... while(i<=5):
+...     if(i==0):
+...       print("{} time".format(int(i)))
+...     elif(int(i)<=5) and (int(i)>1):
+...       print("{} times".format(int(i)))
+...     i=i+1
+... print("end")
+...
+0 time
+2 times
+3 times
+4 times
+5 times
+end
+>>>
