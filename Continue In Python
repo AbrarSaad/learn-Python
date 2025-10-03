@@ -1,0 +1,14 @@
+>>> def ContinueInPython():
+...     word="python"
+...     for letter in word:
+...         if(letter == "t"):
+...             continue
+...         print(letter)
+...
+>>> ContinueInPython()
+p
+y
+h
+o
+n
+>>>
