@@ -1,0 +1,12 @@
+>>> def breakinpython():
+...     word="abcdefgh"
+...     for letter in word:
+...         if (letter == "d"):
+...             break
+...         print(letter)
+...
+>>> breakinpython()
+a
+b
+c
+>>>
