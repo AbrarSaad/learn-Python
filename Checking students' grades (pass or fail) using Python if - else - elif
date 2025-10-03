@@ -1,0 +1,98 @@
+>>> def MyDegree():
+...     Degree = input( "Enter Your Degree: ")
+...     if(int(Degree) >= 90):
+...         if(int(Degree) >= 95):
+...             print("Your result is A+")
+...         else:
+...             print("Your Scour is A-")
+...     elif(int(Degree) >= 80):
+...          if(int(Degree) >= 85):
+...             print("Your result is B+")
+...          else:
+...             print("Your Scour is B-")
+...     elif(int(Degree) >= 70):
+...          if(int(Degree) >= 75):
+...             print("Your result is C+")
+...          else:
+...             print("Your result is C-")
+...     elif(int(Degree) >= 60):
+...          if(int(Degree) >= 65):
+...             print("Your result is D+")
+...          else:
+...             print("Your Scour is D-")
+...     elif(int(Degree) >= 50):
+...          if(int(Degree) >= 55):
+...             print("Your result is E+")
+...          else:
+...             print("Your result is E-")
+...     else:
+...         print(" Your fild ")
+...
+>>> MyDegree()
+Enter Your Degree: 100
+Your result is A+
+>>> 100
+100
+>>> def MyDegree():
+...     Degree = input( "Enter Your Degree: ")
+...     if(int(Degree) >= 90):
+...         if(int(Degree) >= 95):
+...             print("Your result is A+")
+...         else:
+...             print("Your Scour is A-")
+...     elif(int(Degree) >= 80):
+...          if(int(Degree) >= 85):
+...             print("Your result is B+")
+...          else:
+...             print("Your Scour is B-")
+...     elif(int(Degree) >= 70):
+...          if(int(Degree) >= 75):
+...             print("Your result is C+")
+...          else:
+...             print("Your result is C-")
+...     elif(int(Degree) >= 60):
+...          if(int(Degree) >= 65):
+...             print("Your result is D+")
+...          else:
+...             print("Your Scour is D-")
+...     elif(int(Degree) >= 50):
+...          if(int(Degree) >= 55):
+...             print("Your result is E+")
+...          else:
+...             print("Your result is E-")
+...     else:
+...         print(" Your fild ")
+...
+>>> MyDegree()
+Enter Your Degree: 100
+Your result is A+
+>>> MyDegree()
+Enter Your Degree: 94
+Your Scour is A-
+>>> MyDegree()
+Enter Your Degree: 88
+Your result is B+
+>>> MyDegree()
+Enter Your Degree: 84
+Your Scour is B-
+>>> MyDegree()
+Enter Your Degree: 77
+Your result is C+
+>>> MyDegree()
+Enter Your Degree: 73
+Your result is C-
+>>> MyDegree()
+Enter Your Degree: 68
+Your result is D+
+>>> MyDegree()
+Enter Your Degree: 61
+Your Scour is D-
+>>> MyDegree()
+Enter Your Degree: 59
+Your result is E+
+>>> MyDegree()
+Enter Your Degree: 54
+Your result is E-
+>>> MyDegree()
+Enter Your Degree: 49
+>>>You failed
