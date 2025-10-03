@@ -1,0 +1,14 @@
+>>> l=[98,57,"hi",6.2,"Hello",4,'c']
+>>> i=0
+... for item in l:
+...     i=i+1
+...     print("Inex: {}, item: {}".format(int(i), item))
+...
+Inex: 1, item: 98
+Inex: 2, item: 57
+Inex: 3, item: hi
+Inex: 4, item: 6.2
+Inex: 5, item: Hello
+Inex: 6, item: 4
+Inex: 7, item: c
+>>>
