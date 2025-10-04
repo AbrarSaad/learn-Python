@@ -1,0 +1,59 @@
+>>> data = "welcome to my first program in python language"
+>>> data[0]
+'w'
+>>> data[1]
+'e'
+>>> len(data)
+46
+>>> data.lower()
+'welcome to my first program in python language'
+>>> data.upper()
+'WELCOME TO MY FIRST PROGRAM IN PYTHON LANGUAGE'
+>>> data.split()
+['welcome', 'to', 'my', 'first', 'program', 'in', 'python', 'language']
+>>> data.split("i")
+['welcome to my f', 'rst program ', 'n python language']
+>>> x= data.split()
+>>> x
+['welcome', 'to', 'my', 'first', 'program', 'in', 'python', 'language']
+>>> y=" ".join(x)
+>>> y
+'welcome to my first program in python language'
+
+>>> data = "welcome to my first program in python language"
+>>> data[0]
+'w'
+>>> data[1]
+'e'
+>>> len(data)
+46
+>>> data.lower()
+'welcome to my first program in python language'
+>>> data.upper()
+'WELCOME TO MY FIRST PROGRAM IN PYTHON LANGUAGE'
+>>> data.split()
+['welcome', 'to', 'my', 'first', 'program', 'in', 'python', 'language']
+>>> data.split(i)
+Traceback (most recent call last):
+  File "<python-input-53>", line 1, in <module>
+    data.split(i)
+               ^
+NameError: name 'i' is not defined. Did you mean: 'id'?
+>>> data.split("i")
+['welcome to my f', 'rst program ', 'n python language']
+>>> x= data.split()
+>>> x
+['welcome', 'to', 'my', 'first', 'program', 'in', 'python', 'language']
+>>> y=" ".join(x)
+>>> y
+'welcome to my first program in python language'
+>>> y.isalnum() # check the string incluse space or not, if yes, false, if not, true
+False
+>>> d="abrar"
+>>> d.isalnum()
+True
+>>> d.lstrip()
+'abrar'
+>>> y.lstrip()
+'welcome to my first program in python language'
+>>>
