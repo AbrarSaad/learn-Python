@@ -1,0 +1,29 @@
+def FError():
+    try:
+        e = 7
+        z = 0
+        z = i - e  #  NameError: name 'i' is not defined
+    except NameError:
+        print("Check if all variables are defined")
+    print(int(z))
+
+FError()
+Check if all variables are defined
+0
+
+for file we use IOError:
+
+>>> def mytext():
+...
+...     try:
+...         readFile = open(r"C:\Users\wifib\pythontext.txt", "r")
+...         for line in readFile:
+...             print(line, end="")
+...         readFile.close()
+...     except IOError:
+...         print("file is not found")
+...
+... mytext()
+...
+file is not found
+>>>
