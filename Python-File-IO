@@ -1,0 +1,32 @@
+>>> def mytext():
+...     out = open(r"C:\Users\wifib\pythontext.txt", "w") #w mean write in the text file 
+...     out.write("My name is Abrar\n My Age is 22")
+...     out.close()
+...
+... mytext()
+...
+>>> def mytext():
+...     out = open(r"C:\Users\wifib\pythontext.txt", "a") #a mean update or add on the file
+...     out.write("\n Welcome to my profile")
+...     out.close()
+...
+... mytext()
+
+>>> def mytext():
+...     out = open(r"C:\Users\wifib\pythontext.txt", "a") # open file
+...     out.write("\n Best regards")
+...     out.close()
+...     readFile = open(r"C:\Users\wifib\pythontext.txt", "r") # read file
+...     for line in readFile: 
+...         print(line)
+        readFile.close() # important to close the file when you write or read it
+...
+... mytext()
+...
+My name is Abrar
+
+ My Age is 22
+
+ Welcome to my profile
+
+ Best regards
