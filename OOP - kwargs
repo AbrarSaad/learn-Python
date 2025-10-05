@@ -1,0 +1,13 @@
+class setdatacar():
+    def __init__(self,**kwargs):
+        self.data = kwargs
+    def PrintTheInfo(self):
+        print("The car name is : ",self.data["Name"])
+        print("THr price is : ",self.data["Price"])
+        print("The model is : ",self.data["Model"])
+
+def main():
+    printinfo = setdatacar(Name=input("Enter the car name: "),Price=input("Enter the price: "),Model=input("Enter the model: "))
+    printinfo.PrintTheInfo()
+
+if __name__ == "__main__":main()
