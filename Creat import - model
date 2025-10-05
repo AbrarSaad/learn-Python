@@ -1,0 +1,20 @@
+#file name is sum.py
+class Sumop:
+    def Sum2Vs(self,num1,num2):
+        z = num1+num2
+        print(int(z))
+def main():
+    Msum=Sumop()
+    Msum.Sum2Vs(1,2)
+if __name__ == '__main__':main()
+____________________________________________________
+
+#file name is Model.py
+import sum #call sum.py
+
+
+def main():
+    myvalue=sum.Sumop() #call sum.py . method name ()
+    myvalue.Sum2Vs(5,4)  # we can set here the new values, then call the method from sum.py to Model.py
+
+if __name__=="__main__":main()
