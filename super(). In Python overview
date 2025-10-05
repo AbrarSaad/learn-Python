@@ -1,0 +1,30 @@
+class fatherOOP:
+    def Sum(self,num1,num2):
+        Sum=num1+num2
+        print("the Sum result is",Sum)
+    def Sub(self,num1,num2):
+        Sub=num1-num2
+        print("the sub result is",Sub)
+
+class SonOOP(fatherOOP):
+
+#If we have methods with the same name in different classes (inheritance case), the debugger/runner will execute the method from the child class when it is called.
+#But if you want to call the method from the parent class instead, you can use:
+#super().method_name()
+#This will ignore the child’s override and run the parent’s method, even when you call it from the child instance in main.
+ 
+    def Sub(self,num1,num2):
+        Sub=num1-num2 + 7
+        print("the sub result is",Sub)
+
+def main():
+    #Fop=fatherOOP()
+    #Fop.Sum(1,2)
+    #Fop.Sub(1,2)
+    Sop=SonOOP()
+    Sop.Sub(5,2)
+if __name__=="__main__":main()
+
+
+
+
