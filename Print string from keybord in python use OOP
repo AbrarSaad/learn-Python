@@ -1,0 +1,11 @@
+... class Mclass:
+...     @staticmethod
+...     def string1(s):
+...         print(s)
+...
+... def main():
+...     mystring = Mclass()
+...     inputfromkybord = input()
+...     mystring.string1(inputfromkybord)
+...
+... if __name__ == "__main__":main()
