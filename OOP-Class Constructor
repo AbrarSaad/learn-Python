@@ -7,3 +7,22 @@ def main():
     x=constructor("My constructor program")
     x.printName()
 if __name__ == "__main__":main()
+
+
+ex2
+
+class mult():
+    def __init__(self,n1,n2):
+        self.n1=n1
+        self.n2=n2
+    def dotheoperation(self):
+        result=self.n1*self.n2
+        print("the result is : {}".format(int(result)))
+def main():
+    print("Enter the first number : ")
+    x=int(input())
+    print("Enter the second number : ")
+    y=int(input())
+    outputtheresult=mult(x,y)
+    outputtheresult.dotheoperation()
+if __name__ == "__main__":main()
