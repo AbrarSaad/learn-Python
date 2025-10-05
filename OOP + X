@@ -1,0 +1,16 @@
+class abrar:
+    def PrintNumber(self,N1,N2):
+        s=0
+        s=N1+N2
+        print(s)
+    def Multiply(self,N1,N2):
+        s=N1*N2
+        print(s)
+
+def main():
+    mynumber=abrar()
+    mynumber.PrintNumber(5,5)
+
+    myvalue=abrar()
+    myvalue.Multiply(5,5)
+if __name__ == "__main__":main()
