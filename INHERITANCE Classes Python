@@ -1,0 +1,22 @@
+class fatherOOP:     #father class has 2 methods
+    def Sum(self,num1,num2):
+        Sum=num1+num2
+        print("the Sum result is",Sum)
+    def Sub(self,num1,num2):
+        Sub=num1-num2
+        print("the sub result is",Sub)
+        
+class SonOOP(fatherOOP): # son class has 1 method, but when we do INHERITANCE, the son class takes all methods and uses them from the father's methods 
+    def Multiply(self,num1,num2):
+        print("the multiplication result is",num1*num2)
+        
+def main():
+    Fop=fatherOOP() 
+    Fop.Sum(1,2)
+    Fop.Sub(1,2)
+
+    Sop=SonOOP()
+    Sop.Multiply(4,6)
+    Sop.Sum(5,12)
+
+if __name__=="__main__":main()
