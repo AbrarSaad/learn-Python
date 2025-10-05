@@ -1,0 +1,13 @@
+class ALLPRO:
+...     def Mult(self,b,c):
+...         z=b*c
+...         print("your result is : {}".format(int(z)))
+... def main():
+...     myresult = AllPRO()
+...     print("enter thr first nummner")
+...     y=input()
+...     print("enter thr 2nd nummner")
+...     x=input()
+...     Myresult.Mult(int(y),int(x))
+... if __name__ == "__main__":main()
+...
