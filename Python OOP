@@ -1,0 +1,11 @@
+class abrar:
+    def PrintNumber(self,N1,N2):
+        s=0
+        s=x+y
+        print(s)
+
+def main():
+    mynumber=abrar()
+    mynumber.PrintNumber(5,5)
+
+if __name__ == "__main__":main()
