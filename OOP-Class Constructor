@@ -1,0 +1,9 @@
+class constructor:
+    def __init__(self,Name):
+        self.Name=Name
+    def printName(self):
+        print(self.Name)
+def main():
+    x=constructor("My constructor program")
+    x.printName()
+if __name__ == "__main__":main()
