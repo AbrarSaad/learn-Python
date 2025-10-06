@@ -1,0 +1,76 @@
+import sqlite3
+
+
+def main():
+    # Connect to the database
+    db = sqlite3.connect("FaktoraInfo.db")
+    db.row_factory = sqlite3.Row
+    cursor = db.cursor()
+
+    # Drop the old table if it exists and create a new one
+    cursor.execute("DROP TABLE IF EXISTS FaktoraInfo")
+    cursor.execute("""
+                   CREATE TABLE FaktoraInfo
+                   (
+                       ProdectID   INTEGER PRIMARY KEY,
+                       ProdectName TEXT,
+                       Quantity    INTEGER,
+                       Price       REAL,
+                       Total       REAL
+                   )
+                   """)
+
+    print("Database is ready. You can start entering products.\n")
+
+    while True:
+        try:
+            ProdectID = int(input("Enter product ID: "))
+            ProdectName = input("Enter product name: ")
+            Quantity = int(input("Enter quantity: "))
+            Price = float(input("Enter price ($): "))
+            Total = Quantity * Price
+
+            # Insert data into the table
+            cursor.execute("""
+                           INSERT INTO FaktoraInfo(ProdectID, ProdectName, Quantity, Price, Total)
+                           VALUES (?, ?, ?, ?, ?)
+                           """, (ProdectID, ProdectName, Quantity, Price, Total))
+
+            db.commit()
+            print(f"Product added successfully! Total = ${Total:.2f}\n")
+
+        except Exception as e:
+            print("Error:", e, "\n")
+
+        # Ask the user if they want to add another product
+        more = input("Press Enter to add another product, or type 'no' to stop: ").strip().lower()
+        if more == "no":
+            break
+
+    # Display all products in the database
+    print("\nAll products in the database:")
+    cursor.execute("SELECT * FROM FaktoraInfo")
+
+    total_quantity = 0
+    total_price = 0
+    total_total = 0
+
+    for row in cursor:
+        print(f"ProdectID: {row['ProdectID']}, ProdectName: {row['ProdectName']}, "
+              f"Quantity: {row['Quantity']}, Price: ${row['Price']:.2f}, Total: ${row['Total']:.2f}")
+
+        total_quantity += row['Quantity']
+        total_price += row['Price']
+        total_total += row['Total']
+
+    # Display the totals
+    print("\nTotals:")
+    print(f"Total Quantity: {total_quantity}")
+    print(f"Total Price: ${total_price:.2f}")
+    print(f"Total of Totals: ${total_total:.2f}")
+
+    db.close()
+
+
+if __name__ == "__main__":
+    main()
