@@ -1,0 +1,58 @@
+import sqlite3
+
+def main():
+    db = sqlite3.connect("test.db")
+    db.row_factory=sqlite3.Row
+    db.execute("CREATE TABLE IF NOT EXISTS Admin(Name TEXT, Age INTEGER)")
+    db.execute("insert into Admin(Name,Age) values(?,?)", ("Abrar", 21))
+    cursor = db.execute("SELECT * FROM Admin")
+    for row in cursor:
+       print("name: {},Age: {}".format(row["Name"],row["Age"]))
+
+    db.commit()   # حفظ التغييرات
+    db.close()    # إغلاق الاتصال
+
+if __name__ == "__main__":
+    main()
+
+
+_____________
+```python
+import sqlite3   # استيراد مكتبة SQLite للتعامل مع قواعد البيانات المضمنة
+                 # Import SQLite library to work with embedded databases
+
+def main():   # تعريف الدالة الرئيسية
+              # Define the main function
+    db = sqlite3.connect("test.db")   # فتح/إنشاء قاعدة بيانات باسم test.db
+                                      # Open/Create a database named test.db
+
+    db.row_factory = sqlite3.Row      # جعل الصفوف ترجع ككائنات يمكن الوصول لها بالأسماء
+                                      # Return rows as dictionary-like objects (access by column name)
+
+    # إنشاء جدول Admin إذا لم يكن موجودًا مسبقًا، يحتوي على عمودين: Name و Age
+    # Create table Admin if it does not exist, with two columns: Name and Age
+    db.execute("CREATE TABLE IF NOT EXISTS Admin(Name TEXT, Age INTEGER)")
+
+    # إدخال بيانات (Abrar, 21) في جدول Admin
+    # Insert data (Abrar, 21) into Admin table
+    db.execute("INSERT INTO Admin(Name, Age) VALUES(?, ?)", ("Abrar", 21))
+
+    # تنفيذ استعلام SELECT لجلب كل السجلات من جدول Admin
+    # Execute SELECT query to fetch all records from Admin table
+    cursor = db.execute("SELECT * FROM Admin")
+
+    # التكرار على الصفوف وعرض الاسم والعمر لكل سجل
+    # Iterate through rows and print Name and Age for each record
+    for row in cursor:
+        print("name: {}, Age: {}".format(row["Name"], row["Age"]))
+
+    db.commit()   # حفظ جميع التغييرات في قاعدة البيانات
+                  # Save all changes to the database
+
+    db.close()    # إغلاق الاتصال بقاعدة البيانات
+                  # Close the database connection
+
+if __name__ == "__main__":   # تشغيل الدالة الرئيسية إذا كان الملف هو الملف التنفيذي
+                             # Run main function if the file is executed directly
+    main()
+```
