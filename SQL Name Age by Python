@@ -1,0 +1,22 @@
+import sqlite3
+
+def main():
+    db=sqlite3.connect('names.db')
+    db.row_factory=sqlite3.Row
+    db.execute("Create table if not exists names(Name varchar(20), Age integer)")
+
+    while True:
+        name = input("Enter your name (or type 'end' to finish): ")
+
+        if name.lower() == 'end':
+            break
+        age = input("Enter your age: ")
+
+        db.execute("INSERT INTO names(Name, Age) VALUES (?, ?)", (name, age))
+    corsor = db.execute("select * from names")
+    for row in corsor:
+        print(row["Name"],row["Age"])
+
+    db.commit()
+    db.close()
+if __name__=='__main__':main()
